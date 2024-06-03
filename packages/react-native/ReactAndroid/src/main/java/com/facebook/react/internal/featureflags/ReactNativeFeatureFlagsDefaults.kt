@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<b9067f03d9ae365120f8d6ef607354a6>>
+ * @generated SignedSource<<c74b5434945f63cf42551b188b9f7a48>>
  */
 
 /**
@@ -27,7 +27,7 @@ public open class ReactNativeFeatureFlagsDefaults : ReactNativeFeatureFlagsProvi
 
   override fun allowCollapsableChildren(): Boolean = true
 
-  override fun androidEnablePendingFabricTransactions(): Boolean = false
+  override fun allowRecursiveCommitsWithSynchronousMountOnAndroid(): Boolean = false
 
   override fun batchRenderingUpdatesInEventLoop(): Boolean = false
 

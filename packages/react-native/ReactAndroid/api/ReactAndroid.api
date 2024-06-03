@@ -1961,7 +1961,6 @@ public class com/facebook/react/config/ReactFeatureFlags {
 	public static field enableFabricRenderer Z
 	public static field enableFabricRendererExclusively Z
 	public static field enableRemoveDeleteTreeInstruction Z
-	public static field enableTextSpannableCache Z
 	public static field enableViewRecycling Z
 	public static field excludeYogaFromRawProps Z
 	public static field rejectTurboModulePromiseOnNativeError Z
@@ -3972,6 +3971,10 @@ public final class com/facebook/react/turbomodule/core/CallInvokerHolderImpl : c
 public final class com/facebook/react/turbomodule/core/NativeMethodCallInvokerHolderImpl : com/facebook/react/turbomodule/core/interfaces/NativeMethodCallInvokerHolder {
 }
 
+public final class com/facebook/react/turbomodule/core/interfaces/BindingsInstallerHolder {
+	public fun <init> (Lcom/facebook/jni/HybridData;)V
+}
+
 public abstract interface class com/facebook/react/turbomodule/core/interfaces/CallInvokerHolder {
 }
 
@@ -3981,6 +3984,10 @@ public abstract interface class com/facebook/react/turbomodule/core/interfaces/N
 public abstract interface class com/facebook/react/turbomodule/core/interfaces/TurboModule {
 	public abstract fun initialize ()V
 	public abstract fun invalidate ()V
+}
+
+public abstract interface class com/facebook/react/turbomodule/core/interfaces/TurboModuleWithJSIBindings {
+	public abstract fun getBindingsInstaller ()Lcom/facebook/react/turbomodule/core/interfaces/BindingsInstallerHolder;
 }
 
 public abstract class com/facebook/react/uimanager/BaseViewManager : com/facebook/react/uimanager/ViewManager, android/view/View$OnLayoutChangeListener, com/facebook/react/uimanager/BaseViewManagerInterface {
@@ -5556,9 +5563,10 @@ public abstract interface class com/facebook/react/uimanager/debug/NotThreadSafe
 
 public class com/facebook/react/uimanager/drawable/CSSBackgroundDrawable : android/graphics/drawable/Drawable {
 	public fun <init> (Landroid/content/Context;)V
-	public fun borderBoxPath ()Landroid/graphics/Path;
 	public fun draw (Landroid/graphics/Canvas;)V
 	public fun getAlpha ()I
+	public fun getBorderBoxPath ()Landroid/graphics/Path;
+	public fun getBorderBoxRect ()Landroid/graphics/RectF;
 	public fun getBorderColor (I)I
 	public fun getBorderRadius ()Lcom/facebook/react/uimanager/style/BorderRadiusStyle;
 	public fun getBorderWidthOrDefaultTo (FI)F
@@ -5568,9 +5576,10 @@ public class com/facebook/react/uimanager/drawable/CSSBackgroundDrawable : andro
 	public fun getLayoutDirection ()I
 	public fun getOpacity ()I
 	public fun getOutline (Landroid/graphics/Outline;)V
+	public fun getPaddingBoxPath ()Landroid/graphics/Path;
+	public fun getPaddingBoxRect ()Landroid/graphics/RectF;
 	public fun hasRoundedBorders ()Z
 	protected fun onBoundsChange (Landroid/graphics/Rect;)V
-	public fun paddingBoxPath ()Landroid/graphics/Path;
 	public fun setAlpha (I)V
 	public fun setBorderColor (IFF)V
 	public fun setBorderRadius (Lcom/facebook/react/uimanager/style/BorderRadiusProp;Lcom/facebook/react/uimanager/LengthPercentage;)V

@@ -44,10 +44,10 @@ const definitions: FeatureFlagDefinitions = {
       description:
         'Enables the differentiator to understand the "collapsableChildren" prop',
     },
-    androidEnablePendingFabricTransactions: {
+    allowRecursiveCommitsWithSynchronousMountOnAndroid: {
       defaultValue: false,
       description:
-        "To be used with batchRenderingUpdatesInEventLoop. When enbled, the Android mounting layer will concatenate pending transactions to ensure they're applied atomatically",
+        'Adds support for recursively processing commits that mount synchronously (Android only).',
     },
     batchRenderingUpdatesInEventLoop: {
       defaultValue: false,

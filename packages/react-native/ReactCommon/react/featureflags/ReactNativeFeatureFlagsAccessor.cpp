@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<bf265572c103948adc9ff44022782e09>>
+ * @generated SignedSource<<3e5cb385f51ebc9f53010a901ccbb6a2>>
  */
 
 /**
@@ -65,8 +65,8 @@ bool ReactNativeFeatureFlagsAccessor::allowCollapsableChildren() {
   return flagValue.value();
 }
 
-bool ReactNativeFeatureFlagsAccessor::androidEnablePendingFabricTransactions() {
-  auto flagValue = androidEnablePendingFabricTransactions_.load();
+bool ReactNativeFeatureFlagsAccessor::allowRecursiveCommitsWithSynchronousMountOnAndroid() {
+  auto flagValue = allowRecursiveCommitsWithSynchronousMountOnAndroid_.load();
 
   if (!flagValue.has_value()) {
     // This block is not exclusive but it is not necessary.
@@ -74,10 +74,10 @@ bool ReactNativeFeatureFlagsAccessor::androidEnablePendingFabricTransactions() {
     // be accessing the provider multiple times but the end state of this
     // instance and the returned flag value would be the same.
 
-    markFlagAsAccessed(2, "androidEnablePendingFabricTransactions");
+    markFlagAsAccessed(2, "allowRecursiveCommitsWithSynchronousMountOnAndroid");
 
-    flagValue = currentProvider_->androidEnablePendingFabricTransactions();
-    androidEnablePendingFabricTransactions_ = flagValue;
+    flagValue = currentProvider_->allowRecursiveCommitsWithSynchronousMountOnAndroid();
+    allowRecursiveCommitsWithSynchronousMountOnAndroid_ = flagValue;
   }
 
   return flagValue.value();

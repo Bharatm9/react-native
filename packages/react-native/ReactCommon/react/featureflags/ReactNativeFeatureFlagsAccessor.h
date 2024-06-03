@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<d42b9949ba1bedd690893c8c34ac6a2b>>
+ * @generated SignedSource<<f4950ca8555466a584af00c972a38f1d>>
  */
 
 /**
@@ -33,7 +33,7 @@ class ReactNativeFeatureFlagsAccessor {
 
   bool commonTestFlag();
   bool allowCollapsableChildren();
-  bool androidEnablePendingFabricTransactions();
+  bool allowRecursiveCommitsWithSynchronousMountOnAndroid();
   bool batchRenderingUpdatesInEventLoop();
   bool destroyFabricSurfacesInReactInstanceManager();
   bool enableBackgroundExecutor();
@@ -66,7 +66,7 @@ class ReactNativeFeatureFlagsAccessor {
 
   std::atomic<std::optional<bool>> commonTestFlag_;
   std::atomic<std::optional<bool>> allowCollapsableChildren_;
-  std::atomic<std::optional<bool>> androidEnablePendingFabricTransactions_;
+  std::atomic<std::optional<bool>> allowRecursiveCommitsWithSynchronousMountOnAndroid_;
   std::atomic<std::optional<bool>> batchRenderingUpdatesInEventLoop_;
   std::atomic<std::optional<bool>> destroyFabricSurfacesInReactInstanceManager_;
   std::atomic<std::optional<bool>> enableBackgroundExecutor_;

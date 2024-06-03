@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<6535d6d14ba4387ea73d129f064548e0>>
+ * @generated SignedSource<<5c78cdf7676d56996ea174f08bf4b8a6>>
  */
 
 /**
@@ -35,7 +35,7 @@ class ReactNativeFeatureFlagsDefaults : public ReactNativeFeatureFlagsProvider {
     return true;
   }
 
-  bool androidEnablePendingFabricTransactions() override {
+  bool allowRecursiveCommitsWithSynchronousMountOnAndroid() override {
     return false;
   }
 

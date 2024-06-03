@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<5abf40ebbabb3c0bebead668c1b24ff9>>
+ * @generated SignedSource<<3b94757d58e6adb2bccf4ddfb86e2080>>
  */
 
 /**
@@ -26,7 +26,7 @@ public class ReactNativeFeatureFlagsLocalAccessor : ReactNativeFeatureFlagsAcces
 
   private var commonTestFlagCache: Boolean? = null
   private var allowCollapsableChildrenCache: Boolean? = null
-  private var androidEnablePendingFabricTransactionsCache: Boolean? = null
+  private var allowRecursiveCommitsWithSynchronousMountOnAndroidCache: Boolean? = null
   private var batchRenderingUpdatesInEventLoopCache: Boolean? = null
   private var destroyFabricSurfacesInReactInstanceManagerCache: Boolean? = null
   private var enableBackgroundExecutorCache: Boolean? = null
@@ -66,12 +66,12 @@ public class ReactNativeFeatureFlagsLocalAccessor : ReactNativeFeatureFlagsAcces
     return cached
   }
 
-  override fun androidEnablePendingFabricTransactions(): Boolean {
-    var cached = androidEnablePendingFabricTransactionsCache
+  override fun allowRecursiveCommitsWithSynchronousMountOnAndroid(): Boolean {
+    var cached = allowRecursiveCommitsWithSynchronousMountOnAndroidCache
     if (cached == null) {
-      cached = currentProvider.androidEnablePendingFabricTransactions()
-      accessedFeatureFlags.add("androidEnablePendingFabricTransactions")
-      androidEnablePendingFabricTransactionsCache = cached
+      cached = currentProvider.allowRecursiveCommitsWithSynchronousMountOnAndroid()
+      accessedFeatureFlags.add("allowRecursiveCommitsWithSynchronousMountOnAndroid")
+      allowRecursiveCommitsWithSynchronousMountOnAndroidCache = cached
     }
     return cached
   }

@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<44c54555ee69104a69d9e60b13ebccbf>>
+ * @generated SignedSource<<2a748a0a1b92cb0514fec83668ed8b0f>>
  */
 
 /**
@@ -29,8 +29,8 @@ bool ReactNativeFeatureFlags::allowCollapsableChildren() {
   return getAccessor().allowCollapsableChildren();
 }
 
-bool ReactNativeFeatureFlags::androidEnablePendingFabricTransactions() {
-  return getAccessor().androidEnablePendingFabricTransactions();
+bool ReactNativeFeatureFlags::allowRecursiveCommitsWithSynchronousMountOnAndroid() {
+  return getAccessor().allowRecursiveCommitsWithSynchronousMountOnAndroid();
 }
 
 bool ReactNativeFeatureFlags::batchRenderingUpdatesInEventLoop() {
